@@ -6,7 +6,7 @@
 #    By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/07 23:23:07 by mcherel-          #+#    #+#              #
-#    Updated: 2022/01/11 17:22:13 by mcherel-         ###   ########.fr        #
+#    Updated: 2022/01/16 19:01:38 by mcherel-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,14 @@ LIB_FILES = ft_printf.c \
 			ft_putchar.c \
 			ft_putstr.c \
 			ft_itoa.c \
+			ft_getnblen.c \
+			ft_nbtostr.c \
+			ft_utoa.c \
+			ft_xtoa.c \
+			ft_strlen.c \
 			#ft_strchr.c \
 			ft_converts.c \
-			ft_strlen.c \#
+			
 			
 
 O_FILES = $(LIB_FILES:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 23:22:48 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/11 17:21:32 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/16 18:54:31 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,15 @@
 
 //includes
 #include <stdarg.h>
+#include <stddef.h>
 //CONSTANTES
 //#define  CONVERTS "cspdiuxX%"
 #define INT_MINI -2147483648
 #define INT_MAXI 2147483647
 #define UINT_MAX 4294967295
+#define BASE_DEC "0123456789"
+#define BASE_HEM "0123456789ABCDEF"
+#define BASE_HEX "0123456789abcdef"
 
 //union
 /*union uType
@@ -40,8 +44,12 @@ char	*ft_strchr( const char *str, int c);
 void    ft_print(char *str, ...);
 char	*ft_itoa(int n);
 //void    *ft_converts(const char *str);//en cours
-//size_t	ft_strlen( const char *str );
+size_t	ft_strlen( const char *str );
 void    ft_putchar(char c);
+int     ft_getnblen(int nb, int baselen);
+char	*ft_nbtostr(char *str, unsigned int nb, int len, char *base);
+char	*ft_utoa(unsigned int n);
+char    *ft_xtoa(int n);
 
 
 #endif
