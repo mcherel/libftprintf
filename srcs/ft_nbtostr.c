@@ -6,12 +6,12 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 08:23:17 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/16 19:25:59 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/17 14:43:18 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-//#include <stddef.h>
+#include <stddef.h>
 
 char	*ft_nbtostr(char *str, unsigned int nb, int len, char *base)
 {
@@ -19,7 +19,7 @@ char	*ft_nbtostr(char *str, unsigned int nb, int len, char *base)
 	int i;
 	int div;
 	int res;
-
+	
 	div = (int)ft_strlen(base);/*10 ou 16*/
 	while (nb > 0)
 	{

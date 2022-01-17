@@ -6,14 +6,13 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 15:29:08 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/16 19:05:21 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/17 14:44:10 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 #include <stdarg.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 int     ft_printf(const char *str, ...)
 {
@@ -61,7 +60,13 @@ int     ft_printf(const char *str, ...)
                    ft_putstr(s);
                    free(s);
                    break;
-                case 'x':   /* unsigned int */
+                case 'x':   /* hexa */
+                   x = (int) va_arg(args, int);
+                   s = ft_xtoa(x);
+                   ft_putstr(s);
+                   free(s);
+                   break;
+                case 'X':   /* hexa */
                    x = (int) va_arg(args, int);
                    s = ft_xtoa(x);
                    ft_putstr(s);

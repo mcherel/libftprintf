@@ -6,13 +6,12 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 08:26:43 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/16 19:04:01 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/17 14:43:08 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 #include <stdlib.h>
-//#include <stdio.h>
 
 char	*ft_utoa(unsigned int n)
 {
