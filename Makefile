@@ -6,7 +6,7 @@
 #    By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/07 23:23:07 by mcherel-          #+#    #+#              #
-#    Updated: 2022/01/16 19:01:38 by mcherel-         ###   ########.fr        #
+#    Updated: 2022/01/17 15:17:04 by mcherel-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,7 @@ LIB_FILES = ft_printf.c \
 			ft_utoa.c \
 			ft_xtoa.c \
 			ft_strlen.c \
-			#ft_strchr.c \
-			ft_converts.c \
+			ft_strcmp.c \
 			
 			
 

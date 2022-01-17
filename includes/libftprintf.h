@@ -6,7 +6,7 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 23:22:48 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/17 13:56:02 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/17 15:17:14 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ void	ft_putstr(char *str);
 char	*ft_strchr( const char *str, int c);
 void    ft_print(char *str, ...);
 char	*ft_itoa(int n);
-//void    *ft_converts(const char *str);//en cours
+int	    ft_strcmp(char *s1, char *s2);
 size_t	ft_strlen( const char *str );
 void    ft_putchar(char c);
 int     ft_getnblen(long int nb, int baselen);
 char	*ft_nbtostr(char *str, unsigned int nb, int len, char *base);
 char	*ft_utoa(unsigned int n);
-char    *ft_xtoa(int n);
+char    *ft_xtoa(int n, char flag);
 
 
 #endif

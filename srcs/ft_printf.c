@@ -6,7 +6,7 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 15:29:08 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/17 14:44:10 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/17 14:57:34 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,13 @@ int     ft_printf(const char *str, ...)
                    break;
                 case 'x':   /* hexa */
                    x = (int) va_arg(args, int);
-                   s = ft_xtoa(x);
+                   s = ft_xtoa(x, 'x');
                    ft_putstr(s);
                    free(s);
                    break;
                 case 'X':   /* hexa */
                    x = (int) va_arg(args, int);
-                   s = ft_xtoa(x);
+                   s = ft_xtoa(x, 'X');
                    ft_putstr(s);
                    free(s);
                    break;

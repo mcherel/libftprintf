@@ -6,14 +6,14 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 14:51:31 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/16 19:48:35 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/17 14:58:52 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 #include <stdlib.h>
 
-char *ft_xtoa(int n)
+char *ft_xtoa(int n, char flag)
 {
     char *result;
     int len;
@@ -25,6 +25,9 @@ char *ft_xtoa(int n)
 	result[len--] = '\0';
     if (n == 0)
 		result[0] = '0';
-	result = ft_nbtostr(result, n, len, BASE_HEX);
+    if (flag == 'x')
+	    result = ft_nbtostr(result, n, len, BASE_HEX);
+    if (flag == 'X')
+	    result = ft_nbtostr(result, n, len, BASE_HEM);
     return (result);
 }
