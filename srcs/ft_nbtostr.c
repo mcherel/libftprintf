@@ -6,7 +6,7 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 08:23:17 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/17 15:34:50 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/17 21:28:25 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stddef.h>
 //#include <stdio.h>
 
-char	*ft_nbtostr(char *str, unsigned int nb, int len, char *base)
+char	*ft_nbtostr(char *str, long unsigned int nb, int len, char *base)
 {
 	char c;
 	int i;

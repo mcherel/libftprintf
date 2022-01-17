@@ -6,14 +6,14 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 14:51:31 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/17 14:58:52 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/17 18:20:11 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 #include <stdlib.h>
 
-char *ft_xtoa(int n, char flag)
+char *ft_xtoa(size_t n, char flag)
 {
     char *result;
     int len;

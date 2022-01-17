@@ -6,7 +6,7 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 23:22:48 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/17 15:17:14 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/17 21:27:26 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ int	    ft_strcmp(char *s1, char *s2);
 size_t	ft_strlen( const char *str );
 void    ft_putchar(char c);
 int     ft_getnblen(long int nb, int baselen);
-char	*ft_nbtostr(char *str, unsigned int nb, int len, char *base);
+char	*ft_nbtostr(char *str, long unsigned int nb, int len, char *base);
 char	*ft_utoa(unsigned int n);
-char    *ft_xtoa(int n, char flag);
+char    *ft_xtoa(size_t n, char flag);
 
 
 #endif

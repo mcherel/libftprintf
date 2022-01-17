@@ -6,13 +6,14 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 15:29:08 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/17 14:57:34 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/17 21:32:56 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 int     ft_printf(const char *str, ...)
 {
@@ -27,7 +28,7 @@ int     ft_printf(const char *str, ...)
     unsigned int    u;
     char            *s;
     char            c;
-    //void            *p;
+    void            *p;
     va_start(args, str);
     while(str[written] != '\0')
     {
@@ -61,14 +62,21 @@ int     ft_printf(const char *str, ...)
                    free(s);
                    break;
                 case 'x':   /* hexa */
-                   x = (int) va_arg(args, int);
+                   x = (size_t) va_arg(args, size_t);
                    s = ft_xtoa(x, 'x');
                    ft_putstr(s);
                    free(s);
                    break;
                 case 'X':   /* hexa */
-                   x = (int) va_arg(args, int);
+                   x = (size_t) va_arg(args, size_t);
                    s = ft_xtoa(x, 'X');
+                   ft_putstr(s);
+                   free(s);
+                   break;
+                case 'p':   /* pointeur */
+                   p = (void *) va_arg(args, void *);
+                   ft_putstr("0x");
+                   s = ft_xtoa((size_t)p, 'x');
                    ft_putstr(s);
                    free(s);
                    break;
@@ -83,17 +91,3 @@ int     ft_printf(const char *str, ...)
     va_end(args);
     return (written);
 }
-
-/*void ft_print(char *str, ...)
-{
-    va_list args;
-    if (*str == '%')
-        ft_putchar('%');
-    else if (*str == 'c')
-    {
-        char c = (int)va_arg(args, int);
-        ft_putchar(c);
-    }
-    else
-        ft_putstr("_le type n'est pas supporté_");
-}*/
