@@ -6,7 +6,7 @@
 #    By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/07 23:23:07 by mcherel-          #+#    #+#              #
-#    Updated: 2022/01/21 22:42:01 by mcherel-         ###   ########.fr        #
+#    Updated: 2022/01/23 22:55:56 by mcherel-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,3 +50,9 @@ fclean: clean
 			rm -rf $(NAME)
 
 re: fclean all
+
+#TO REMOVE
+test:		
+			gcc $(FLAGS) _main.c libftprintf.a && ./a.out
+f:
+			gcc main.c libftprintf.a && ./a.out 

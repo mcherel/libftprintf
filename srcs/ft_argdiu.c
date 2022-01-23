@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_argdiu.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 22:07:31 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/23 16:00:59 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/23 23:13:40 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdlib.h>
 
-void    ft_argdiu(char c, va_list args, uType u)
+int    ft_argdiu(char c, va_list args, uType u)
 {
     if ((c == 'd') || (c == 'i'))
     {
@@ -26,6 +26,7 @@ void    ft_argdiu(char c, va_list args, uType u)
         u.s = ft_utoa(u.u); 
     }
     ft_putstr(u.s);
+    return ((int)ft_strlen(u.s));
     free(u.s);
     u.s = NULL;
 

@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_switch.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 14:27:43 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/23 16:00:59 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/23 22:59:01 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdlib.h>
+#include <stdio.h>
 
-void ft_switch(char c, va_list args)
+int ft_switch(char c, va_list args)
 {
     uType           u;
 	
@@ -21,9 +22,10 @@ void ft_switch(char c, va_list args)
     if ((c == 'd') || (c == 'i') || (c == 'u'))
         ft_argdiu(c, args, u);
     else if ((c == 'x') || (c == 'X') || (c == 'p'))
-        ft_argxXp(c, args, u);
+        return (ft_argxXp(c, args, u));
     else if ((c == 's') || (c == 'c') || (c =='%'))
-        ft_argsc(c, args, u);
+        return (ft_argsc(c, args, u));
+    return (0);
     
 //     switch (c) 
 //     {

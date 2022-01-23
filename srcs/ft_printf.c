@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 15:29:08 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/23 18:11:31 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/23 23:57:04 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 int     ft_printf(const char *str, ...)
 {
-    size_t written;
-    size_t count;
+    int written;
+    int count;
 
     written = 0;
     count = 0;
@@ -39,13 +39,16 @@ int     ft_printf(const char *str, ...)
         {
             count++;
             written++;
-            ft_switch(str[written], args);
+            count = count + 1 - ft_switch(str[written], args);
+            //written++;
+            //written = written + ft_switch(str[written+1], args);
         }
         written++;
     }
     va_end(args);
-    //printf("WRITTEN %zu \n", written);
-    return (written-count);
+    written = written - count;
+    //printf("WRITTEN %d \n", written - count);
+    return (written);
 }
 
 /*void ft_print(char *str, ...)

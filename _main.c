@@ -34,8 +34,8 @@ int main (void)
 	ft_printf("8 %c %c %c \n", '2', '1', 0);
 	printf("8 %c %c %c \n", '2', '1', 0);
 
-	printf("LEN %d ",(ft_printf("9 %c %c %c \n", 0, '1', '2')));
-	printf("LEN %d ",(printf("9 %c %c %c \n", 0, '1', '2')));
+	printf("LEN %d \n",(ft_printf("9 %c %c %c \n", 0, '1', '2')));
+	printf("LEN %d \n",(printf("9 %c %c %c \n", 0, '1', '2')));
     
     return (0);
 }

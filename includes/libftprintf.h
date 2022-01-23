@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                      :+:      :+:    :+:   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 23:22:48 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/23 10:10:52 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/23 23:11:46 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF
-#define PRINTF
+#ifndef LIBFTPRINTF
+#define LIBFTPRINTF
 
 //includes
 #include <stdarg.h>
@@ -50,13 +50,13 @@ int     ft_getnblen(long int nb, int baselen);
 char	*ft_nbtostr(char *str, long unsigned int nb, int len, char *base);
 char	*ft_utoa(unsigned int n);
 char    *ft_xtoa(size_t n, char flag);
-int     ft_switch(char c, va_list args);
-int    ft_argsc(char c, va_list args, uType u);
-int    ft_argdiu(char c, va_list args, uType u);
+void    ft_switch(char c, va_list args);
+void    ft_argsc(char c, va_list args, uType u);
+void    ft_argdiu(char c, va_list args, uType u);
 //void    ft_argc(char c, va_list args);
 //void    ft_argc(char c, va_list args, uType u);
 //void    ft_argu(char c, va_list args, uType u);
-int    ft_argxXp(char c, va_list args, uType u);
+void    ft_argxXp(char c, va_list args, uType u);
 //void    ft_argp(char c, va_list args, uType u);
 
 
