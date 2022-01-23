@@ -6,7 +6,7 @@
 /*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 15:29:08 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/23 16:00:59 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/23 18:11:31 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@
 int     ft_printf(const char *str, ...)
 {
     size_t written;
+    size_t count;
 
     written = 0;
+    count = 0;
     if (!str)
         return (written);
     va_list         args;
@@ -28,17 +30,22 @@ int     ft_printf(const char *str, ...)
     while(str[written] != '\0')
     {
         if (str[written] != '%')
+        {
             ft_putchar(str[written]);
+            //written++;
+
+        }
         else
         {
+            count++;
             written++;
             ft_switch(str[written], args);
-            //break;
         }
         written++;
     }
     va_end(args);
-    return (written);
+    //printf("WRITTEN %zu \n", written);
+    return (written-count);
 }
 
 /*void ft_print(char *str, ...)
