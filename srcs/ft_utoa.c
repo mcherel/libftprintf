@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 08:26:43 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/17 14:43:08 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/23 16:00:59 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <stdlib.h>
 
 char	*ft_utoa(unsigned int n)

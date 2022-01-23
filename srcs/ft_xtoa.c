@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_xtoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 14:51:31 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/17 18:20:11 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/23 16:00:59 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <stdlib.h>
 
 char *ft_xtoa(size_t n, char flag)

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_argdiu.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 22:07:31 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/21 22:43:29 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/23 16:00:59 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <stdlib.h>
 
 void    ft_argdiu(char c, va_list args, uType u)

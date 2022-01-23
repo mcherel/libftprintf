@@ -3,20 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_switch.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 14:27:43 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/22 16:31:12 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/23 16:00:59 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <stdlib.h>
 
 void ft_switch(char c, va_list args)
 {
     uType           u;
-
+	
+	u.d = 0;
     if ((c == 'd') || (c == 'i') || (c == 'u'))
         ft_argdiu(c, args, u);
     else if ((c == 'x') || (c == 'X') || (c == 'p'))
