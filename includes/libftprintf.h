@@ -6,7 +6,7 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 23:22:48 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/21 22:27:31 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/23 10:10:52 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <stdarg.h>
 #include <stddef.h>
 //CONSTANTES
-#define  FLAGS "cspdiuxX%"
+#define FORMAT "cspdiuxX%"
 #define INT_MINI -2147483648
 #define INT_MAXI 2147483647
 #define UINT_MAX 4294967295
