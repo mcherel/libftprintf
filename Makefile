@@ -6,7 +6,7 @@
 #    By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/07 23:23:07 by mcherel-          #+#    #+#              #
-#    Updated: 2022/01/23 22:55:56 by mcherel-         ###   ########.fr        #
+#    Updated: 2022/01/25 00:51:11 by mcherel-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,8 @@ LIB_FILES = ft_printf.c \
 			ft_argsc.c \
         	ft_argdiu.c \
         	ft_argxXp.c \
+			ft_calloc.c \
+			ft_bzero.c \
 			
 			
 
@@ -53,6 +55,6 @@ re: fclean all
 
 #TO REMOVE
 test:		
-			gcc $(FLAGS) _main.c libftprintf.a && ./a.out
+			clang $(FLAGS) _main.c libftprintf.a && ./a.out
 f:
 			gcc main.c libftprintf.a && ./a.out 

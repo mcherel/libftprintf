@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_utoa.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/12 08:26:43 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/27 16:04:00 by mcherel-         ###   ########.fr       */
+/*   Created: 2021/11/30 13:05:41 by mcherel-          #+#    #+#             */
+/*   Updated: 2022/01/25 00:54:53 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*allocates memory for an array of elementCount elements of 
+ * size elementSize each and returns a pointer to the allocated memory. 
+ * The memory is set to zero.*/
 
 #include "ft_printf.h"
 #include <stdlib.h>
 
-char	*ft_utoa(unsigned int n)
+void	*ft_calloc( size_t elementCount, size_t elementSize )
 {
-	char			*result;
-	int				len;
+	void	*tab;
 
-	//if (n > UINT_MAX || n < 0)
-	//	return (NULL);
-	len = ft_getnblen(n, 10);
-	result = (char *)malloc((len + 1) * sizeof(char));
-	if (!result)
-		return (NULL);
-	result[len--] = '\0';
-	if (n == 0)
-		result[0] = '0';
-	result = ft_nbtostr(result, n, len, BASE_DEC);
-	return (result);
+	tab = malloc(elementSize * elementCount);
+	if (tab == NULL)
+		return (tab);
+	ft_bzero(tab, elementSize * elementCount);
+	return (tab);
 }

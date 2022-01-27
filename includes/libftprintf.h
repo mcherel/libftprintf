@@ -6,7 +6,7 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 23:22:48 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/23 23:11:46 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/27 13:01:49 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 #include <stdarg.h>
 #include <stddef.h>
 //CONSTANTES
+#ifdef __APPLE__
+#define PTR_NULL "0x0"
+#elif __Linux__
+#define PTR_NULL "(nil)"
+#endif
+
 #define FORMAT "cspdiuxX%"
 #define INT_MINI -2147483648
 #define INT_MAXI 2147483647

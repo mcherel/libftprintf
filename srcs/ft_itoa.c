@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 11:51:26 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/23 16:00:59 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/27 16:05:01 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char	*ft_itoa(int n)
 	if (n > INT_MAXI || n < (int)INT_MINI)
 		return (NULL);
 	len = ft_getnblen(n, 10);
+	//result = (char *)ft_calloc((len + 1), sizeof(char));
 	result = (char *)malloc((len + 1) * sizeof(char));
 	if (!result)
 		return (NULL);

@@ -6,12 +6,12 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 08:09:55 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/17 21:29:50 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/27 12:59:17 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include <stdio.h>
+//#include <stdio.h>
 
 int     ft_getnblen(long int nb, int baselen)
 {

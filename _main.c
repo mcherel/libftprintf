@@ -6,6 +6,8 @@
 
 int main (void)
 {
+    //TEST CHAR
+    
     ft_printf("(CHAR)Hello world %c, %c, %c\n", 'A', 'B','C');
     printf("(CHAR)Hello world %c, %c, %c\n", 'A', 'B','C');
 
@@ -36,6 +38,30 @@ int main (void)
 
 	printf("LEN %d \n",(ft_printf("9 %c %c %c \n", 0, '1', '2')));
 	printf("LEN %d \n",(printf("9 %c %c %c \n", 0, '1', '2')));
+    
+//TEST STRING
+    char *s2 = "Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Atirei o pau no gatis, per gatis num morreus.";
+    printf("TEST STRINGw\n");
+    printf("1 LEN %d\n", ft_printf("%s\n", ""));
+    printf("1 LEN %d\n", printf("%s\n", ""));
+	printf("2, LEN %d\n", ft_printf(" %s\n", ""));
+	printf("2, LEN %d\n", printf(" %s\n", ""));
+	printf("3, LEN %d\n", ft_printf("%s \n", ""));
+	printf("3, LEN %d\n", printf("%s \n", ""));
+	printf("4, LEN %d\n", ft_printf(" %s \n", ""));
+	printf("4, LEN %d\n", printf(" %s \n", ""));
+	printf("5, LEN %d\n", ft_printf(" %s \n", "-"));
+	printf("5, LEN %d\n", printf(" %s \n", "-"));
+	printf("6, LEN %d\n", ft_printf(" %s %s \n", "", "-"));
+	printf("6, LEN %d\n", printf(" %s %s \n", "", "-"));
+	printf("7, LEN %d\n", ft_printf(" %s %s \n", " - ", ""));
+	printf("7, LEN %d\n", printf(" %s %s \n", " - ", ""));
+	printf("8, LEN %d\n", ft_printf(" %s %s %s %s %s\n", " - ", "", "4", "", s2));
+	printf("8, LEN %d\n", printf(" %s %s %s %s %s\n", " - ", "", "4", "", s2));
+	printf("9., LEN %d\n", ft_printf(" %s %s %s %s %s ", " - ", "", "4", "", "2 "));
+	printf("9., LEN %d\n", printf(" %s %s %s %s %s ", " - ", "", "4", "", "2 "));
+    printf("10, LEN %d\n", ft_printf(" NULL %p NULL ", NULL));
+	//printf("10, LEN %d\n", printf(" NULL %s NULL ", NULL));
     
     return (0);
 }

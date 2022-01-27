@@ -6,13 +6,13 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 14:27:43 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/23 22:59:01 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/27 13:00:25 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdlib.h>
-#include <stdio.h>
+//#include <stdio.h>
 
 int ft_switch(char c, va_list args)
 {
@@ -20,7 +20,7 @@ int ft_switch(char c, va_list args)
 	
 	u.d = 0;
     if ((c == 'd') || (c == 'i') || (c == 'u'))
-        ft_argdiu(c, args, u);
+        return (ft_argdiu(c, args, u));
     else if ((c == 'x') || (c == 'X') || (c == 'p'))
         return (ft_argxXp(c, args, u));
     else if ((c == 's') || (c == 'c') || (c =='%'))

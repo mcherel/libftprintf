@@ -6,49 +6,48 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 15:29:08 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/23 23:57:04 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/27 12:58:07 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdarg.h>
 #include <stdlib.h>
-#include <stdio.h>
+//#include <stdio.h>
 
 int     ft_printf(const char *str, ...)
 {
-    int written;
+    //int written;
     int count;
 
-    written = 0;
+    //written = 0;
     count = 0;
     if (!str)
-        return (written);
+        return (count);
     va_list         args;
 
     va_start(args, str);
-    while(str[written] != '\0')
+    while(*str != '\0' && str)
     {
-        if (str[written] != '%')
+        if (*str != '%')
         {
-            ft_putchar(str[written]);
-            //written++;
-
-        }
+            ft_putchar(*str);
+            count++;
+            str++;
+        }       
         else
         {
-            count++;
-            written++;
-            count = count + 1 - ft_switch(str[written], args);
-            //written++;
-            //written = written + ft_switch(str[written+1], args);
+            str++;
+            //printf("COUNT BEFORE SWITCH: %d\n", count);
+            count = (count + ft_switch(*str, args));
+            //printf("COUNT AFTER SWITCH: %d\n", count);
+            str++;
         }
-        written++;
     }
     va_end(args);
-    written = written - count;
-    //printf("WRITTEN %d \n", written - count);
-    return (written);
+    //printf("COUNT PRINTF %d \n", count);
+
+    return (count);
 }
 
 /*void ft_print(char *str, ...)

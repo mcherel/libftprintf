@@ -17,6 +17,12 @@
 #include <stdarg.h>
 #include <stddef.h>
 //CONSTANTES
+#ifdef __APPLE__
+#define PTR_NULL "(null)"
+#elif __GNUC__
+#define PTR_NULL "(nil)"
+#endif
+
 #define FORMAT "cspdiuxX%"
 #define INT_MINI -2147483648
 #define INT_MAXI 2147483647
@@ -51,13 +57,14 @@ char	*ft_nbtostr(char *str, long unsigned int nb, int len, char *base);
 char	*ft_utoa(unsigned int n);
 char    *ft_xtoa(size_t n, char flag);
 int     ft_switch(char c, va_list args);
-int    ft_argsc(char c, va_list args, uType u);
-int    ft_argdiu(char c, va_list args, uType u);
+int     ft_argsc(char c, va_list args, uType u);
+int     ft_argdiu(char c, va_list args, uType u);
 //void    ft_argc(char c, va_list args);
 //void    ft_argc(char c, va_list args, uType u);
 //void    ft_argu(char c, va_list args, uType u);
-int    ft_argxXp(char c, va_list args, uType u);
+int     ft_argxXp(char c, va_list args, uType u);
 //void    ft_argp(char c, va_list args, uType u);
-
+void	ft_bzero(void *s, size_t n);
+void	*ft_calloc( size_t elementCount, size_t elementSize);
 
 #endif
