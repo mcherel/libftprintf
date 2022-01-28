@@ -35,7 +35,8 @@ printf("*LEN MAIN %d\n", printf("18Hello world%X\n", a));
 //printf("18bisHello world%X\n\n", (unsigned int)"ffffffff");
 int b;
 int *ptr;
+b = 100;
 ptr = &b;
-printf("LEN MAIN %d\n", ft_printf("19Hello world%p\n", ptr));
-printf("*LEN MAIN %d\n", printf("20Hello world%p\n", ptr));
+printf("LEN MAIN %d\n", ft_printf("19Hello world%p\n", b));
+printf("*LEN MAIN %d\n", printf("20Hello world%p\n", b));
 }

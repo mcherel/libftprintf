@@ -6,7 +6,7 @@
 /*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 23:22:48 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/27 13:01:49 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/01/28 10:52:22 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@
 #endif
 
 #define FORMAT "cspdiuxX%"
-#define INT_MINI -2147483648
-#define INT_MAXI 2147483647
+#define INT_MIN -2147483648
+#define INT_MAX 2147483647
 #define UINT_MAX 4294967295
 #define BASE_DEC "0123456789"
 #define BASE_HEM "0123456789ABCDEF"
@@ -53,7 +53,7 @@ int	    ft_strcmp(char *s1, char *s2);
 size_t	ft_strlen( const char *str );
 void    ft_putchar(char c);
 int     ft_getnblen(long int nb, int baselen);
-char	*ft_nbtostr(char *str, long unsigned int nb, int len, char *base);
+char	*ft_nbtostr(char *str, long unsigned int nb, size_t len, char *base);
 char	*ft_utoa(unsigned int n);
 char    *ft_xtoa(size_t n, char flag);
 void    ft_switch(char c, va_list args);
