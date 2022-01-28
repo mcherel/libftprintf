@@ -16,10 +16,8 @@
 char	*ft_utoa(unsigned int n)
 {
 	char			*result;
-	int				len;
+	size_t			len;
 
-	//if (n > UINT_MAX || n < 0)
-	//	return (NULL);
 	len = ft_getnblen(n, 10);
 	result = (char *)malloc((len + 1) * sizeof(char));
 	if (!result)

@@ -24,14 +24,20 @@ int ft_argxXp(char c, va_list args, uType u)
         if(u.p == 0)
         {
             ft_putstr(PTR_NULL);
-            return  (ft_strlen(PTR_NULL));
+            return  (int)(ft_strlen(PTR_NULL));
+        }
+        else if ((long)u.p == (long)LONG_MIN)
+        {
+
+            ft_putstr("0xffffffff80000000");
+            return(18);
         }
         ft_putstr("0x");
         len = 2;
-        u.x = (size_t)u.p;
+        u.x = (long long int)u.p;
     }
     else if ((c == 'x') || (c == 'X'))
-        u.x = (size_t) va_arg(args, size_t);
+        u.x = (long long int) va_arg(args, long long int);
     if ((c == 'x') || (c == 'p'))
         u.s = ft_xtoa(u.x, 'x');
     else if (c == 'X')

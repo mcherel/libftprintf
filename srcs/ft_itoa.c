@@ -20,7 +20,7 @@ char	*ft_itoa(int n)
 {
 	unsigned int	nb;
 	char			*result;
-	int				len;
+	size_t			len;
 
 	if (n > INT_MAX || n < (int)INT_MIN)
 		return (NULL);

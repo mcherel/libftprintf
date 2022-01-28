@@ -13,7 +13,7 @@
 #include <stddef.h>
 //#include <stdio.h>
 
-int     ft_getnblen(long int nb, int baselen)
+int     ft_getnblen(long long int nb, int baselen)
 {
 	int	i;
 

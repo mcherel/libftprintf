@@ -99,14 +99,23 @@ int main (void)
 	printf("***********pointeurs***********");
 
 	printf("1 LEN %d\n", ft_printf(" %p ", -1));
+	printf("1 LEN %d\n", printf(" %p ", -1));
 	printf("2 LEN %d\n", ft_printf(" %p ", 1));
+	printf("2 LEN %d\n", printf(" %p ", 1));
 	printf("3 LEN %d\n", ft_printf(" %p ", 15));
+	printf("3 LEN %d\n", printf(" %p ", 15));
 	printf("4 LEN %d\n", ft_printf(" %p ", 16));
+	printf("4 LEN %d\n", printf(" %p ", 16));
 	printf("5 LEN %d\n", ft_printf(" %p ", 17));
+	printf("5 LEN %d\n", printf(" %p ", 17));
 	printf("6 LEN %d\n", ft_printf(" %p %p ", (long)LONG_MIN, LONG_MAX));
+	printf("6 LEN %d\n", printf(" %p %p ", (long)LONG_MIN, LONG_MAX));
 	printf("7 LEN %d\n", ft_printf(" %p %p ", (int)INT_MIN, INT_MAX));
-	printf("8 LEN %d\n", ft_printf(" %p %p ", ULONG_MAX, -ULONG_MAX));//type long (doit etre void *)
+	printf("7 LEN %d\n", printf(" %p %p ", (int)INT_MIN, INT_MAX));
+	printf("8 LEN %d\n", ft_printf(" %p %p ", ULONG_MAX, -ULONG_MAX + 1));//type long (doit etre void *)
+	printf("8 LEN %d\n", printf(" %p %p ", ULONG_MAX, -ULONG_MAX + 1));//type long (doit etre void *)
 	printf("9 LEN %d\n", ft_printf(" %p %p ", 0, 0));//type int (doit etre void *)
+	printf("9 LEN %d\n", printf(" %p %p ", 0, 0));//type int (doit etre void *)
 
 
     

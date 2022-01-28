@@ -26,11 +26,8 @@ LIB_FILES = ft_printf.c \
 			ft_strcmp.c \
 			ft_switch.c \
 			ft_argsc.c \
+			ft_argxXp.c	\
         	ft_argdiu.c \
-        	ft_argxXp.c \
-			ft_calloc.c \
-			ft_bzero.c \
-			
 			
 
 O_FILES = $(LIB_FILES:.c=.o)

@@ -13,13 +13,12 @@
 #include "ft_printf.h"
 #include <stdlib.h>
 
-char *ft_xtoa(size_t n, char flag)
+char *ft_xtoa(long long int n, char flag)
 {
   char *result;
-  int len;
-  result = NULL;
+  size_t len;
+  
   len = ft_getnblen(n, 16);
-  //result = (char *)ft_calloc((len + 1), sizeof(char));
   result = (char *)malloc((len + 1) * sizeof(char));
 	if (!result)
 		return (NULL);

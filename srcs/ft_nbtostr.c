@@ -14,7 +14,7 @@
 #include <stddef.h>
 //#include <stdio.h>
 
-char	*ft_nbtostr(char *str, size_t nb, size_t len, char *base)
+char	*ft_nbtostr(char *str, long long int nb, size_t len, char *base)
 {
 	char c;
 	size_t i;
@@ -22,9 +22,6 @@ char	*ft_nbtostr(char *str, size_t nb, size_t len, char *base)
 	size_t res;
 	
 	div = ft_strlen(base);/*10 ou 16*/
-	//printf("div : %d\n", div);
-	//printf("base : %s\n", base);
-	//printf("nb : %d\n", nb);
 	while (nb > 0)
 	{
 		res = nb % div;

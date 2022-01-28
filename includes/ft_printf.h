@@ -42,8 +42,8 @@ typedef union
     void *p;
     int d;
     unsigned int u;
-    size_t x;
-    size_t X;
+    long long int x;
+    long long int X;
 }uType;
 
 //PROPTOTYPES
@@ -55,10 +55,10 @@ char	*ft_itoa(int n);
 int	    ft_strcmp(char *s1, char *s2);
 size_t	ft_strlen( const char *str );
 void    ft_putchar(char c);
-int     ft_getnblen(long int nb, int baselen);
-char	*ft_nbtostr(char *str, long unsigned int nb, size_t len, char *base);
+int     ft_getnblen(long long int nb, int baselen);
+char	*ft_nbtostr(char *str, long long int nb, size_t len, char *base);
 char	*ft_utoa(unsigned int n);
-char    *ft_xtoa(size_t n, char flag);
+char    *ft_xtoa(long long int n, char flag);
 int     ft_switch(char c, va_list args);
 int     ft_argsc(char c, va_list args, uType u);
 int     ft_argdiu(char c, va_list args, uType u);
@@ -66,8 +66,6 @@ int     ft_argdiu(char c, va_list args, uType u);
 //void    ft_argc(char c, va_list args, uType u);
 //void    ft_argu(char c, va_list args, uType u);
 int     ft_argxXp(char c, va_list args, uType u);
-//void    ft_argp(char c, va_list args, uType u);
-void	ft_bzero(void *s, size_t n);
-void	*ft_calloc( size_t elementCount, size_t elementSize);
+//int     ft_argp(char c, va_list args, uType u);
 
 #endif
