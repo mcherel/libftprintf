@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_switch.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 14:27:43 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/27 13:00:25 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/02/02 16:07:13 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ int ft_switch(char c, va_list args)
 	u.d = 0;
     if ((c == 'd') || (c == 'i') || (c == 'u'))
         return (ft_argdiu(c, args, u));
+    /*else if (c == 'x' || c == 'X')
+        return (ft_argx(c, args, u));
+    else if (c == 'p')
+        return (ft_argp(c, args, u));*/
     else if ((c == 'x') || (c == 'X') || (c == 'p'))
         return (ft_argxXp(c, args, u));
     else if ((c == 's') || (c == 'c') || (c =='%'))

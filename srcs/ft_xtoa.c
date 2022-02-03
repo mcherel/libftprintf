@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_xtoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 14:51:31 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/27 17:12:46 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/02/03 10:11:20 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdlib.h>
+//#include <stdio.h>
 
-char *ft_xtoa(long long int n, char flag)
+int ft_xtoa(unsigned long n, char flag)
 {
-  char *result;
-  size_t len;
-  
-  len = ft_getnblen(n, 16);
-  result = (char *)malloc((len + 1) * sizeof(char));
-	if (!result)
-		return (NULL);
-	result[len--] = '\0';
-  if (n == 0)
-  result[0] = '0';
+  int len;
+  len = 0;
+  if (n > 15)
+  {
+    len += ft_xtoa(n / 16, flag);
+    //printf("LEN XTOA : %d \n", len);
+    //len += ft_xtoa(n % 16, flag);
+  }
   if (flag == 'x')
-    result = ft_nbtostr(result, n, len, BASE_HEX);
+    len += ft_putchar(BASE_HEX[n%16]);
   if (flag == 'X')
-    result = ft_nbtostr(result, n, len, BASE_HEM);
-  return (result);
+    len += ft_putchar(BASE_HEM[n%16]);
+//printf("LEN XTOA : %d \n", len);
+  return (len);
 }

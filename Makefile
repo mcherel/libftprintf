@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/07 23:23:07 by mcherel-          #+#    #+#              #
-#    Updated: 2022/01/25 00:51:11 by mcherel-         ###   ########.fr        #
+#    Updated: 2022/02/03 09:33:07 by mcherel-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,6 @@ re: fclean all
 
 #TO REMOVE
 test:		
-			clang $(FLAGS) _main.c libftprintf.a && ./a.out
+			clang _main.c libftprintf.a && ./a.out
 f:
 			gcc main.c libftprintf.a && ./a.out 

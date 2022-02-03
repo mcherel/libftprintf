@@ -33,7 +33,6 @@ int     ft_printf(const char *str, ...)
         {
             ft_putchar(*str);
             count++;
-            str++;
         }       
         else
         {
@@ -41,25 +40,11 @@ int     ft_printf(const char *str, ...)
             //printf("COUNT BEFORE SWITCH: %d\n", count);
             count = (count + ft_switch(*str, args));
             //printf("COUNT AFTER SWITCH: %d\n", count);
-            str++;
         }
+        str++;
     }
     va_end(args);
     //printf("COUNT PRINTF %d \n", count);
 
     return (count);
 }
-
-/*void ft_print(char *str, ...)
-{
-    va_list args;
-    if (*str == '%')
-        ft_putchar('%');
-    else if (*str == 'c')
-    {
-        char c = (int)va_arg(args, int);
-        ft_putchar(c);
-    }
-    else
-        ft_putstr("_le type n'est pas supporté_");
-}*/

@@ -25,11 +25,11 @@ printf("LEN MAIN %d\n", ft_printf("13Hello world%u\n", (unsigned int)4294967295)
 printf("*LEN MAIN %d\n", printf("14Hello world%u\n", (unsigned int)4294967295));
 
 int a = 42;
-printf("LEN MAIN %d\n", ft_printf("15Hello world%x\n", a));
-printf("*LEN MAIN %d\n", printf("16Hello world%x\n", a));
+printf("LEN MAIN %d\n", ft_printf("15Hello world%x\n", -UINT_MAX));
+printf("*LEN MAIN %d\n", printf("16Hello world%x\n", -UINT_MAX));
 
-printf("LEN MAIN %d\n", ft_printf("17Hello world%X\n", a));
-printf("*LEN MAIN %d\n", printf("18Hello world%X\n", a));
+printf("LEN MAIN %d\n", ft_printf("17Hello world%X\n", -UINT_MAX));
+printf("*LEN MAIN %d\n", printf("18Hello world%X\n", -UINT_MAX));
 //ft_printf("17Hello world%u\n", (unsigned int)4294967295);
 ////printf("18bisHello world%X\n\n", (unsigned int)"FFFFFFFF");
 //printf("18bisHello world%X\n\n", (unsigned int)"ffffffff");
