@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_argsc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 15:41:39 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/27 15:32:14 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/02/03 12:26:56 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdlib.h>
-//#include <stdio.h>
 
 int ft_argsc(char c, va_list args, uType u)
 {

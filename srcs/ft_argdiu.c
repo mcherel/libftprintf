@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_argdiu.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 22:07:31 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/27 12:53:26 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/02/03 12:56:40 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ int    ft_argdiu(char c, va_list args, uType u)
         u.s = ft_itoa(u.d);
         ft_putstr(u.s);
         len = (int)ft_strlen(u.s);
-        free(u.s);
-        return (len);
+        free(u.s);;
     }
     else if (c == 'u')
     {
@@ -34,7 +33,6 @@ int    ft_argdiu(char c, va_list args, uType u)
         ft_putstr(u.s);
         len = (int)ft_strlen(u.s);
         free(u.s);
-        return (len);
     }
     return (len);
 }

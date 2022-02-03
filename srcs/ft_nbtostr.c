@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nbtostr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 08:23:17 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/28 10:52:06 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/02/03 12:42:01 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stddef.h>
-//#include <stdio.h>
 
 char	*ft_nbtostr(char *str, long long int nb, size_t len, char *base)
 {
@@ -25,15 +24,7 @@ char	*ft_nbtostr(char *str, long long int nb, size_t len, char *base)
 	while (nb > 0)
 	{
 		res = nb % div;
-		if (res < 10)
-			c = res + '0';
-		else
-		{
-			if (ft_strcmp(base, BASE_HEX) == 0)
-				c = res - 10 + 'a';
-			if (ft_strcmp(base, BASE_HEM) == 0)
-				c = res - 10 + 'A';
-		}
+		c = res + '0';
 		i = 0;
 		while (base[i] != '\0')
 			{

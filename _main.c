@@ -114,8 +114,8 @@ int main (void)
 	printf("24 LEN %d\n", ft_printf(" %lx ", (long)LONG_MAX));//ko
 	printf("25 LEN %d\n", printf(" %lx ", (long)LONG_MIN));//ko
 	printf("25 LEN %d\n", ft_printf(" %lx ", (long)LONG_MIN));//ko
-	printf("26 LEN %d\n", printf(" %x ", (unsigned int)UINT_MAX));//ok valgrind error
-	printf("26 LEN %d\n", ft_printf(" %x ", (unsigned int)UINT_MAX));//ok valgrind error
+	printf("26 LEN %d\n", printf(" %x ", (unsigned int)UINT_MAX));
+	printf("26 LEN %d\n", ft_printf(" %x ", (unsigned int)UINT_MAX));
 	printf("27 LEN %d\n", printf(" %lx ", (unsigned long)ULONG_MAX));//ko
 	printf("27 LEN %d\n", ft_printf(" %lx ", (unsigned long)ULONG_MAX));//ko
 	printf("28 LEN %d\n", printf(" %llx ", 9223372036854775807LL));//ko

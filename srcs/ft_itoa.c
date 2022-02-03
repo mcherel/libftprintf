@@ -3,18 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 11:51:26 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/01/28 10:52:10 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/02/03 12:26:41 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdlib.h>
-
-//static int	ft_getlen(int nb);
-//static char	*ft_getstr(char *str, unsigned int nb, int len);
 
 char	*ft_itoa(int n)
 {
@@ -25,7 +22,6 @@ char	*ft_itoa(int n)
 	if (n > INT_MAX || n < (int)INT_MIN)
 		return (NULL);
 	len = ft_getnblen(n, 10);
-	//result = (char *)ft_calloc((len + 1), sizeof(char));
 	result = (char *)malloc((len + 1) * sizeof(char));
 	if (!result)
 		return (NULL);
@@ -42,29 +38,3 @@ char	*ft_itoa(int n)
 	result = ft_nbtostr(result, nb, len, BASE_DEC);
 	return (result);
 }
-/*
-static int	ft_getlen(int nb)
-{
-	int	i;
-
-	i = 0;
-	if (nb <= 0)
-		i++;
-	while (nb != 0)
-	{
-		i++;
-		nb = nb / 10;
-	}
-	return (i);
-}
-*/
-/*static char	*ft_getstr(char *str, unsigned int nb, int len)
-{
-	while (nb > 0)
-	{
-		str[len--] = (nb % 10) + '0';
-		nb = nb / 10;
-	}
-	return (str);
-}
-*/

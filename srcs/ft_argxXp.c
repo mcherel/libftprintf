@@ -6,7 +6,7 @@
 /*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 22:25:08 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/02/03 10:20:01 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/02/03 12:27:38 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int ft_argxXp(char c, va_list args, uType u)
         }
         ft_putstr("0x");
         len = 2;
-        u.x = (unsigned int)u.p;
+        u.x = (unsigned long)u.p;
     }
     else if ((c == 'x') || (c == 'X'))
         u.x = (unsigned int) va_arg(args, int);
