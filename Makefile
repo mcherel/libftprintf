@@ -6,7 +6,7 @@
 #    By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/07 23:23:07 by mcherel-          #+#    #+#              #
-#    Updated: 2022/02/03 12:46:08 by mcherel-         ###   ########.fr        #
+#    Updated: 2022/02/03 16:23:53 by mcherel-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ LIB_FILES = ft_printf.c \
 			ft_strlen.c \
 			ft_switch.c \
 			ft_argsc.c \
-			ft_argxXp.c	\
+			ft_argxp.c	\
         	ft_argdiu.c \
 			
 

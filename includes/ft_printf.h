@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcherel- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mcherel- <mcherel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 23:22:48 by mcherel-          #+#    #+#             */
-/*   Updated: 2022/02/03 13:50:03 by mcherel-         ###   ########.fr       */
+/*   Updated: 2022/02/03 16:23:53 by mcherel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stddef.h>
 //CONSTANTES
 # ifdef __APPLE__ 
-#  define PTR_NULL "(null)"
+#  define PTR_NULL "0x0"
 # elif __GNUC__
 #  define PTR_NULL "(nil)"
 # endif
@@ -37,28 +37,27 @@
 //union
 typedef union uType
 {
-	char		c;
-	char		*s;
-	void		*p;
-	int		d;
+	char			c;
+	char			*s;
+	void			*p;
+	int				d;
 	unsigned int	u;
-	long long int	x;
-	long long int	X;
-}uType;
+	unsigned long	x;
+}					t_uType;
 
 //PROPTOTYPES
-int	ft_printf(const char *, ...);
+int		ft_printf(const char *str, ...);
 void	ft_putstr(char *str);
 char	*ft_itoa(int n);
 size_t	ft_strlen( const char *str );
-int	ft_putchar(char c);
-int	ft_getnblen(long long int nb, int baselen);
+int		ft_putchar(char c);
+int		ft_getnblen(long long int nb, int baselen);
 char	*ft_nbtostr(char *str, long long int nb, size_t len, char *base);
 char	*ft_utoa(unsigned int n);
-int	ft_xtoa(unsigned long n, char flag);
-int	ft_switch(char c, va_list args);
-int	ft_argsc(char c, va_list args, uType u);
-int	ft_argdiu(char c, va_list args, uType u);
-int	ft_argxXp(char c, va_list args, uType u);
+int		ft_xtoa(unsigned long n, char flag);
+int		ft_switch(char c, va_list args);
+int		ft_argsc(char c, va_list args, t_uType u);
+int		ft_argdiu(char c, va_list args, t_uType u);
+int		ft_argxp(char c, va_list args, t_uType u);
 
 #endif
